@@ -1,0 +1,26 @@
+{
+  "name": "steem-burn-pool-bot",
+  "version": "1.0.0",
+  "description": "Automated bot that creates posts on Steem blockchain with beneficiary rewards to null account for burning STEEM",
+  "main": "steem_burn_bot.js",
+  "scripts": {
+    "start": "node steem_burn_bot.js",
+    "test": "node steem_burn_bot.js"
+  },
+  "keywords": [
+    "steem",
+    "blockchain",
+    "burn",
+    "bot",
+    "automation",
+    "dsteem"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dsteem": "^0.11.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

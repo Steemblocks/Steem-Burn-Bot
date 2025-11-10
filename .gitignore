@@ -1,0 +1,17 @@
+# Configuration file with credentials
+config.json
+
+# Log files
+steem_burn_bot.log
+*.log
+
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Environment files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db

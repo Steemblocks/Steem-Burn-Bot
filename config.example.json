@@ -1,0 +1,13 @@
+{
+  "username": "your_steem_username",
+  "posting_key": "5JxxxYourPostingKeyHereXxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "interval_hours": 2,
+  "post_immediately": true,
+  "self_vote": false,
+  "tags": ["burnpost", "steem", "burn", "null", "steemit"],
+  "nodes": [
+    "https://api.steemit.com",
+    "https://api.steem.fans",
+    "https://api.steemitdev.com"
+  ]
+}
