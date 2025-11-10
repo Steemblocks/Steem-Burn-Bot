@@ -9,19 +9,12 @@ const fs = require('fs');
 
 // Configure logging
 class Logger {
-    constructor(logFile = 'steem_burn_bot.log') {
-        this.logFile = logFile;
-    }
+    constructor() {}
 
     log(level, message) {
         const timestamp = new Date().toISOString().replace('T', ' ').substring(0, 19);
         const logMessage = `${timestamp} - ${level} - ${message}`;
         console.log(logMessage);
-        
-        // Async file write to avoid blocking
-        fs.appendFile(this.logFile, logMessage + '\n', (err) => {
-            if (err) console.error(`Failed to write to log file: ${err.message}`);
-        });
     }
 
     info(message) { this.log('INFO', message); }
