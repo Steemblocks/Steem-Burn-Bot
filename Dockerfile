@@ -20,17 +20,15 @@ COPY steem_burn_bot.js ./
 # Create a non-root user for security
 RUN addgroup -g 1001 -S nodejs && \
     adduser -S nodejs -u 1001 && \
-    chown -R nodejs:nodejs /app
+    chown -R nodejs:nodejs /app && \
+    mkdir -p /app/logs && \
+    chown -R nodejs:nodejs /app/logs
 
 # Switch to non-root user
 USER nodejs
 
 # Set environment variables
 ENV NODE_ENV=production
-
-# Health check (optional - checks if process is running)
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD pgrep -f "node steem_burn_bot.js" || exit 1
 
 # Run the bot
 CMD ["node", "steem_burn_bot.js"]
